@@ -1,21 +1,74 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
 
   <title>Minion calc</title>
-  <meta name="description" content="Calculates earning from minions ">
+  <meta name="description" content="Calculates earning from minions " />
 
+  <link rel="stylesheet" href="css/styles.css?v=1.0" />
 
-  <link rel="stylesheet" href="css/styles.css?v=1.0">
-
-  <!--[if lt IE 9]>
-  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
+  <script src="js/script.js"></script>
 </head>
 
 <body>
-  <script src="js/script.js"></script>
+  <div class="mainContainer">
+
+    <form id="form">
+
+      <label for="minionSpeed">Minion speed:</label>
+      <input type="number" id="minionSpeed" name="minionSpeed" />
+   
+      <label for="itemsPerAction">Items per action:</label>
+      <input type="number" id="itemsPerAction" name="itemsPerAction" />
+    
+
+      <label for="unitPrice">Unit price:</label>
+      <input type="number" id="unitPrice" name="unitPrice" />
+   
+
+      <label for="fuel">Fuel:</label>
+
+      <select id="fuel">
+        <option value="5">Coal</option>
+        <option value="5">Block of Coal</option>
+        <option value="5">Enchanted Bread</option>
+        <option value="10">Enchanted Coal</option>
+        <option value="20">Enchanted Charcoal</option>
+        <option value="25">Solar Panel</option>
+        <option value="25">Enchanted Lava Bucket</option>
+        <option value="50">Hamster Wheel</option>
+        <option value="90">Foul Flesh</option>
+        <option value="200">Catalyst</option>
+      </select>
+   
+
+ 
+
+      <label for="upgradeSlot1">Upgrade slot 1:</label>
+      <input type="number" id="upgradeSlot1" name="upgradeSlot1" />
+  
+
+ 
+
+      <label for="upgradeSlot2">Upgrade slot 1:</label>
+      <input type="number" id="upgradeSlot2" name="upgradeSlot2" />
+
+
+ 
+
+      <label for="bonusSpeed">Bonus speed:</label>
+      <input type="number" id="bonusSpeed" name="bonusSpeed" />
+
+
+      <label for="minionSlots">Minion slots:</label>
+      <input type="number" id="minionSlots" name="minionSlots" />
+
+    </form>
+    <button type="submit" form="form" value="Calculate">Calculate</button>
+
 </body>
+
 </html>
