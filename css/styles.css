@@ -18,6 +18,7 @@ div.mainContainer {
     clear: both;
     overflow: hidden;
     background-color: #FFF;
+    border-radius: 5px;
 
   }
 

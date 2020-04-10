@@ -9,8 +9,8 @@
   <meta name="description" content="Calculates earning from minions " />
 
   <link rel="stylesheet" href="css/styles.css?v=1.0" />
+  <script src="js/scripts.js"></script>
 
-  <script src="js/script.js"></script>
 </head>
 
 <body>
@@ -19,19 +19,20 @@
     <form id="form">
 
       <label for="minionSpeed">Minion speed:</label>
-      <input type="number" id="minionSpeed" name="minionSpeed" />
+      <input type="number" id="minionSpeed" name="minionSpeed" value="16" />
    
       <label for="itemsPerAction">Items per action:</label>
-      <input type="number" id="itemsPerAction" name="itemsPerAction" />
+      <input type="number" id="itemsPerAction" name="itemsPerAction" value="2" />
     
 
       <label for="unitPrice">Unit price:</label>
-      <input type="number" id="unitPrice" name="unitPrice" />
+      <input type="number" id="unitPrice" name="unitPrice" value="3" />
    
 
       <label for="fuel">Fuel:</label>
 
       <select id="fuel">
+        <option selected value="0">-None-</option>
         <option value="5">Coal</option>
         <option value="5">Block of Coal</option>
         <option value="5">Enchanted Bread</option>
@@ -48,26 +49,41 @@
  
 
       <label for="upgradeSlot1">Upgrade slot 1:</label>
-      <input type="number" id="upgradeSlot1" name="upgradeSlot1" />
-  
-
+      <select id="upgradeSlot1">
+        <option value="0">-None-</option>
+        <option value="dia-spreading">Diamond spreading</option>
+        <option value="5">Minion expander</option>
+        <option value="20">Flycatcher</option>
+        
+      </select>
  
 
-      <label for="upgradeSlot2">Upgrade slot 1:</label>
-      <input type="number" id="upgradeSlot2" name="upgradeSlot2" />
-
+      <label for="upgradeSlot2">Upgrade slot 2:</label>
+      <select id="upgradeSlot2">
+        <option value="0">-None-</option>
+        <option value="dia-spreading">Diamond spreading</option>
+        <option value="5">Minion expander</option>
+        <option value="20">Flycatcher</option>
+        
+      </select>
 
  
 
       <label for="bonusSpeed">Bonus speed:</label>
-      <input type="number" id="bonusSpeed" name="bonusSpeed" />
+      <input type="number" id="bonusSpeed" name="bonusSpeed" value="0" />
 
 
       <label for="minionSlots">Minion slots:</label>
-      <input type="number" id="minionSlots" name="minionSlots" />
+      <input type="number" id="minionSlots" name="minionSlots" value="24" min="5" max="24"/>
 
     </form>
-    <button type="submit" form="form" value="Calculate">Calculate</button>
+    <button type=""  value="Calculate" onclick="javascript:calculateMinionCoins();">Calculate</button>
+      <div style="padding:15px;">
+        <span id="result">Results:</span>
+      </div>
+  </div>
+
+
 
 </body>
 
