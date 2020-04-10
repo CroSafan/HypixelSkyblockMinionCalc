@@ -20,33 +20,44 @@
 
       <label for="minionSpeed">Minion speed:</label>
       <input type="number" id="minionSpeed" name="minionSpeed" value="16" />
-   
+      <div class="tooltip"> <span>&#9432;</span>
+        <span class="tooltiptext">View minion action speed in the minion tier menu</span>
+      </div>
+
       <label for="itemsPerAction">Items per action:</label>
       <input type="number" id="itemsPerAction" name="itemsPerAction" value="2" />
-    
+      <div class="tooltip"> <span>&#9432;</span>
+        <span class="tooltiptext">Type in the average amount a minion produces per action. Example Clay=2, Snow=2,Lapis=3 etc.</span>
+      </div>
+
 
       <label for="unitPrice">Unit price:</label>
       <input type="number" id="unitPrice" name="unitPrice" value="3" />
-   
+      <div class="tooltip"> <span>&#9432;</span>
+        <span class="tooltiptext">Price an item sells to the NPC/Bazaar</span>
+      </div>
+
 
       <label for="fuel">Fuel:</label>
 
       <select id="fuel">
         <option selected value="0">-None-</option>
-        <option value="5">Coal</option>
-        <option value="5">Block of Coal</option>
-        <option value="5">Enchanted Bread</option>
-        <option value="10">Enchanted Coal</option>
-        <option value="20">Enchanted Charcoal</option>
-        <option value="25">Solar Panel</option>
-        <option value="25">Enchanted Lava Bucket</option>
-        <option value="50">Hamster Wheel</option>
-        <option value="90">Foul Flesh</option>
         <option value="200">Catalyst</option>
+        <option value="90">Foul Flesh</option>
+        <option value="50">Hamster Wheel</option>
+        <option value="25">Enchanted Lava Bucket</option>
+        <option value="25">Solar Panel</option>
+        <option value="20">Enchanted Charcoal</option>
+        <option value="10">Enchanted Coal</option>
+        <option value="5">Enchanted Bread</option>
+        <option value="5">Block of Coal</option>
+        <option value="5">Coal</option>
       </select>
-   
+      <div class="tooltip"> <span>&#9432;</span>
+        <span class="tooltiptext">Choose one type of fuel</span>
+      </div>
 
- 
+
 
       <label for="upgradeSlot1">Upgrade slot 1:</label>
       <select id="upgradeSlot1">
@@ -54,9 +65,11 @@
         <option value="dia-spreading">Diamond spreading</option>
         <option value="5">Minion expander</option>
         <option value="20">Flycatcher</option>
-        
+
       </select>
- 
+      <div class="tooltip"> <span>&#9432;</span>
+        <span class="tooltiptext">You can only use one diamond spreading per minion</span>
+      </div>
 
       <label for="upgradeSlot2">Upgrade slot 2:</label>
       <select id="upgradeSlot2">
@@ -64,23 +77,44 @@
         <option value="dia-spreading">Diamond spreading</option>
         <option value="5">Minion expander</option>
         <option value="20">Flycatcher</option>
-        
-      </select>
 
- 
+      </select>
+      <div class="tooltip"> <span>&#9432;</span>
+        <span class="tooltiptext">You can only use one diamond spreading per minion</span>
+      </div>
+      
+     
 
       <label for="bonusSpeed">Bonus speed:</label>
       <input type="number" id="bonusSpeed" name="bonusSpeed" value="0" />
-
-
-      <label for="minionSlots">Minion slots:</label>
-      <input type="number" id="minionSlots" name="minionSlots" value="24" min="5" max="24"/>
-
-    </form>
-    <button type=""  value="Calculate" onclick="javascript:calculateMinionCoins();">Calculate</button>
-      <div style="padding:15px;">
-        <span id="result">Results:</span>
+      <div class="tooltip"> <span>&#9432;</span>
+        <span class="tooltiptext">Enter the bonus you get from pets, crystals etc. If you get a bonus from a pet like 10% and 10% from a crystal, you would enter 20</span>
       </div>
+      <label for="minionSlots">Minion slots:</label>
+      <input type="number" id="minionSlots" name="minionSlots" value="24" min="5" max="24" />
+      <div class="tooltip"> <span>&#9432;</span>
+        <span class="tooltiptext">Enter your available minion slots</span>
+      </div>    </form>
+    <button type="" value="Calculate" onclick="javascript:calculateMinionCoins();">Calculate</button>
+    <table>
+      <tr>
+        <th></th>
+        <th style="width: 75%;">Coins</th>
+      </tr>
+      <tr>
+        <td>1 hour</td>
+        <td><span id="oneHourCoins"></span></td>
+      </tr>
+      <tr>
+        <td>1 day</td>
+        <td><span id="oneDayCoins"></span></td>
+      </tr>
+      <tr>
+        <td>1 week</td>
+        <td><span id="oneWeekCoins"></span></td>
+      </tr>
+
+    </table>
   </div>
 
 
