@@ -1,7 +1,38 @@
 
-const calculateButton = document.getElementById("calculateButton");
 
-calculateButton.addEventListener("click", () => { calculateMinionCoins() });
+const minionSpeedInput = document.getElementById("minionSpeed");
+const itemsPerActionInput = document.getElementById("itemsPerAction");
+const unitPriceInput = document.getElementById("unitPrice");
+const fuelSelect = document.getElementById("fuel");
+const upgradeSlot1Select = document.getElementById("upgradeSlot1");
+const upgradeSlot2Select = document.getElementById("upgradeSlot2");
+const bonusSpeedInput = document.getElementById("bonusSpeed");
+const minionSlotsInput = document.getElementById("minionSlots");
+
+
+//adding change and input event listeners 
+minionSpeedInput.addEventListener("change", () => { calculateMinionCoins() });
+minionSpeedInput.addEventListener("input", () => { calculateMinionCoins() });
+
+itemsPerActionInput.addEventListener("change", () => { calculateMinionCoins() });
+itemsPerActionInput.addEventListener("input", () => { calculateMinionCoins() });
+
+unitPriceInput.addEventListener("change", () => { calculateMinionCoins() });
+unitPriceInput.addEventListener("input", () => { calculateMinionCoins() });
+
+bonusSpeedInput.addEventListener("change", () => { calculateMinionCoins() });
+bonusSpeedInput.addEventListener("input", () => { calculateMinionCoins() });
+
+minionSlotsInput.addEventListener("change", () => { calculateMinionCoins() });
+minionSlotsInput.addEventListener("input", () => { calculateMinionCoins() });
+
+upgradeSlot1Select.addEventListener("change", () => { calculateMinionCoins() });
+upgradeSlot2Select.addEventListener("change", () => { calculateMinionCoins() });
+
+fuelSelect.addEventListener("change", () => { calculateMinionCoins() });
+
+document.addEventListener("DOMContentLoaded", () => calculateMinionCoins());
+
 
 const calculateMinionCoins = () => {
   let coinsProducedPerMinion = 0.0;
